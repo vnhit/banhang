@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+body{
+    background-color: aliceblue;
+    background-image: url(../Header/intro/background.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    text-align: left;
+}
+/* ------------------nav--------------------*/
+nav{
+    background-color: rgb(244,237,226);
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li, a{
+    color: white;
+    font-size: 15px;
+}
+nav ul li:nth-child(2) a {
+    color: black;
+}
+nav ul li:nth-child(2) i {
+    color: black;
+    font-size: 12px;
+    margin: 3px;
+}
+nav ul li:nth-child(3) {
+    position: relative;
+}
+nav ul li:nth-child(3) input {
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 6px;
+    outline: none;
+}
+nav ul li:nth-child(3) i {
+    position: absolute;
+    font-size: 12px;
+    right: 12px;
+    color: black;
+    line-height: 30px;
+    cursor: pointer;
+}
+nav ul li:nth-child(4) button {
+    height: 30px;
+    padding: 0 12px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+nav ul li:nth-child(4) button i {
+    margin: 6px;
+}
+nav ul li:nth-child(4) button:hover {
+    background-color: rgb(56, 55, 55);
+}
+nav ul li:nth-child(5):hover a {
+    color: rgb(54, 54, 54);
+}
+nav ul li:nth-child(6) a {
+    color: rgb(54, 54, 54);
+}
+.btn-content {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: rgb(85, 79, 79);
+    display: block;
+    float: left;
+    margin: 6px;
+}
+.btn-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: rgb(90, 75, 75);
+    display: block;
+    pointer-events: none;
+    animation: btnmh 1s linear infinite;
+    display: block;
+}
+@keyframes btnmh {
+    from{
+        opacity: 0.4;
+    }
+    to{
+        transform: scale(3);
+    }
+}
+nav ul li:nth-child(7) a, nav ul li:nth-child(8) a {
+    color: rgb(54, 54, 54);
+}
+
+/*------------menu-bar-------------*/
+.menu-bar {
+    background-color: rgb(147, 153, 151);
+    
+}
+.menu-bar ul {
+    display: flex;
+    justify-content: space-between;
+}
+.menu-bar div ul li a {
+    color: black;
+    font-size: 20px;
+}
+.menu-bar div ul li a i {
+    margin-right: 6px;
+    margin-left: 3px;
+    font-size: 20px;
+}
+.menu-bar div ul li {
+    padding: 12px 12px;
+    transition: all 0.3s ease;
+}
+.menu-bar div ul li:hover {
+    background-color: white;
+}
+.menu-bar ul li:nth-child(3) {
+    position: relative;
+}
+.menu-bar ul li:nth-child(3)::before {
+    position: absolute;
+    content: "Giảm 5%";
+    display: block;
+    height: 12px;
+    width: 45px;
+    background-color: #f51212;
+    border-radius: 5px;
+    right: 0;
+    top: 0;
+    font-size: 10px;
+    padding-left: 4px;
+    padding-top: 2px;
+    color: #fff;
+}
+
+/*-------------adress-form-------------*/
+.adress-form {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.6);
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+}
+.adress-form-content {
+    width: 450px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.adress-form-content form {
+    padding: 12px 40px;
+}
+.adress-form-content h2 {
+    font-size: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #696767;
+    position: relative;
+}
+.adress-form-content h2 span {
+    display: block;
+    position: absolute;
+    height: 30px;
+    padding: 30px;
+    padding: 0 6px;
+    border: 1px solid #6d6b6b;
+    right: 12px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 30px;
+    border-radius: 5px;
+}
+.adress-form-content form p {
+    font-size: 18px;
+    padding-top: 10px;
+}
+.adress-form-content form input, select {
+    height: 40px;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #6d6b6b;
+}
+.adress-form-content form button {
+    margin-top: 30px;
+    height: 40px;
+    width: 80%;
+    cursor: pointer;
+    background-color: coral;
+    outline: none;
+    border: none;
+    color: #fff;
+}
