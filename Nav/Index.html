@@ -6,17 +6,23 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="./Nav/style.css">
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
         <nav>
         <div class="container">
             <ul>
             <li><a href=""><img src="/Header/login/thuonghieu.png" alt="" style="width: 100px; height: 60px;"></a></li>
-            <li><a href="">Bắc Giang <i class="fa-solid fa-arrow-down"></i></a>
-                <div class="adress-form">
+            <li id="adress-form"><a href="#">Bắc Giang <i class="fa-solid fa-arrow-down"></i></a></li>
+            <li><input type="text" placeholder="Bạn tìm gì?"><i class="fa-solid fa-magnifying-glass"></i></li>
+            <li id="diachi"><a href=""></a><button><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</button></li>
+            <li><a href="">Lịch sử đơn hàng</a></li>
+            <li><a href=""><span class="btn-content"><span class="btn-top"></span></span>Nhận ngay ưu đãi!</a></li>
+            <li><a href="">24h Công nghệ</a></li>
+            <li><a href="">Hỏi đáp</a></li>
+            <div class="adress-form">
                     <div class="adress-form-content">
-                        <h2>Chọn địa chỉ nhận hàng<span>X Đóng</span></h2>
+                        <h2>Chọn địa chỉ nhận hàng<span id="adress-close">X Đóng</span></h2>
                         <form action="">
                             <p>Chọn địa chỉ để biết thời gian giao hàng</p>
                             <select name="" id="">
@@ -40,26 +46,47 @@
                         </form>
                     </div>
                 </div>
-            </li>
-            <li><input type="text" placeholder="Bạn tìm gì?"><i class="fa-solid fa-magnifying-glass"></i></li>
-            <li><a href=""></a><button><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</button></li>
-            <li><a href="">Lịch sử đơn hàng</a></li>
-            <li><a href=""><span class="btn-content"><span class="btn-top"></span></span>Nhận ngay ưu đãi!</a></li>
-            <li><a href="">24h Công nghệ</a></li>
-            <li><a href="">Hỏi đáp</a></li>
         </ul>
         </div>
     </nav>
         <section class="menu-bar">
             <div class="container">
-                <div class="menu-bar-container">
+                <div class="menu-bar-content">
                     <ul>
-                        <li><a href=""><i class="fa-solid fa-laptop"></i>Laptop<i class="fa-solid fa-arrow-down"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-camera"></i>Camera<i class="fa-solid fa-arrow-down"></i></a></li>
+                        <li><a href=""><i class="fa-solid fa-laptop"></i>Laptop<i class="fa-solid fa-arrow-down"></i></a>
+                            <div class="submenu">
+                                    <ul>
+                                        <li><a href=""></a></li>
+                                        <li><a href=""></a></li>                                      
+                                    </ul>
+                            </div>
+                        </li>
+                        <li><a href=""><i class="fa-solid fa-camera"></i>Camera<i class="fa-solid fa-arrow-down"></i></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li><a href=""></a></li>
+                                        <li><a href=""></a></li>
+                                        
+                                    </ul>
+                            </div>
+                        </li>
+                        <li><a href="">Phụ kiện<i class="fa-solid fa-arrow-down"></i></a>
+                            <div class="submenu">
+                                    <ul>
+                                        <li><a href="">Card đồ họa</a></li>
+                                        <li><a href="">CPU</a></li>
+                                        <li><a href="">Thẻ nhớ</a></li>
+                                        <li><a href="">Chân máy ảnh</a></li>
+                                        <li><a href="">Đèn flash</a></li>
+                                        <li><a href="">Filter</a></li>
+                                    </ul>
+                            </div>
+                        </li>
                         <li><a href="">Máy cũ giá rẻ</a></li>
                     </ul>
                 </div>
             </div>
         </section>
+        <script src="/script.js"></script>
     </body>
 </html>
