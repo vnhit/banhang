@@ -5,84 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fujifilm Cameras - Product Page</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <style>
-        body {
-            background-color: #f0f0f0;
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 20px;
-            color: #333;
-        }
-        header {
-            margin-bottom: 20px;
-        }
-        header h1 {
-            font-size: 2rem;
-            color: #0073e6;
-        }
-        nav a {
-            color: #0073e6;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main section {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.1);
-        }
-        main section h2 {
-            margin-bottom: 15px;
-            color: #004080;
-        }
-        main ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        main ul li {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-        main ul li h3 {
-            margin-bottom: 5px;
-            color: #0059b3;
-        }
-        main ul li p {
-            margin: 2px 0;
-        }
-    </style>
 </head>
 <body>
+    <nav>
+        <a href="Index.html" style="display: block; padding: 10px; font-weight: bold;">← Back to Home</a>
+    </nav>
     <header>
-        <h1>Fujifilm Cameras</h1>
-        <nav>
-            <a href="Index.html">← Back to Home</a>
-        </nav>
+        <h1 style="text-align: center; margin-top: 10px;">Fujifilm Cameras</h1>
     </header>
+    <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-laptop"></i>Laptop<i class="fa-solid fa-arrow-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="dell.html">Dell</a></li>
+                                <li><a href="msi.html">MSI</a></li> 
+                                <li><a href="hp.html">HP</a></li>
+                                <li><a href="lenovo.html">Lenovo</a></li>                                     
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href=""><i class="fa-solid fa-camera"></i>Camera<i class="fa-solid fa-arrow-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="fujifilm.html">Fujifilm</a></li>
+                                <li><a href="canon.html">Canon</a></li>
+                                <li><a href="sony.html">Sony</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Phụ kiện<i class="fa-solid fa-arrow-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="card-do-hoa.html">Card đồ họa</a></li>
+                                <li><a href="cpu.html">CPU</a></li>
+                                <li><a href="the-nho.html">Thẻ nhớ</a></li>
+                                <li><a href="chan-may-anh.html">Chân máy ảnh</a></li>
+                                <li><a href="den-flash.html">Đèn flash</a></li>
+                                <li><a href="filter.html">Filter</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Máy cũ giá rẻ</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <main>
-        <section>
-            <h2>Featured Fujifilm Cameras</h2>
-            <ul>
-                <li>
-                    <h3>Fujifilm X-T4</h3>
-                    <p>Advanced mirrorless camera with 26.1MP sensor, 4K video, and in-body stabilization.</p>
-                    <p>Price: $1,699</p>
-                </li>
-                <li>
-                    <h3>Fujifilm X100V</h3>
-                    <p>Compact premium camera with 23MP sensor and classic design.</p>
-                    <p>Price: $1,399</p>
-                </li>
-                <li>
-                    <h3>Fujifilm GFX 100S</h3>
-                    <p>Medium format camera with 102MP sensor for ultra-high resolution images.</p>
-                    <p>Price: $5,999</p>
-                </li>
-            </ul>
-        </section>
+        <div class="container">
+            <section class="product-grid">
+                <article class="product-card">
+                    <img src="/Header/Camera/Fujifilm/FujifilmX-T4/fujifilm-x-t4-body-back-500x500.jpg" alt="Fujifilm X-T4" class="product-image" />
+                    <div class="product-info">
+                    <h3 class="product-name">Fujifilm X-T4</h3>
+                    <p class="product-description">High-performance mirrorless camera with in-body stabilization.</p>
+                    <p class="product-price">40.990.000 ₫</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="/Header/Camera/Fujifilm/FUJIFILMX100V/fujifilm-x100v-silver-1000x1000-1.jpg" alt="Fujifilm X100V" class="product-image" />
+                    <div class="product-info">
+                    <h3 class="product-name">Fujifilm X100V</h3>
+                    <p class="product-description">Compact premium camera with classic design and advanced features.</p>
+                    <p class="product-price">44.990.000 đ</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="/Header/Camera/Fujifilm/FujifilmGFX100S/fujifilm-gfx-100s-1-500x500.jpg" alt="Fujifilm GFX 100S" class="product-image" />
+                    <div class="product-info">
+                    <h3 class="product-name">Fujifilm GFX 100S</h3>
+                    <p class="product-description">Medium format camera with exceptional image quality and resolution.</p>
+                    <p class="product-price">88.990.000đ</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </article>
+            </section>
+        </div>
     </main>
+    <script src="/script.js"></script>
 </body>
 </html>
