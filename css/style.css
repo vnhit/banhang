@@ -261,7 +261,7 @@ nav ul li:nth-child(7) a, nav ul li:nth-child(8) a {
     display: block;
 }
 
-/* Phần Camera */
+/* Phần Menu */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

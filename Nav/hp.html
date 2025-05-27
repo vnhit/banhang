@@ -17,72 +17,97 @@
         }
         header h1 {
             font-size: 2rem;
-            color: #0057b7;
+            color: #cc0000;
         }
         nav a {
-            color: #0057b7;
+            color: #cc0000;
             text-decoration: none;
             font-weight: bold;
         }
         nav a:hover {
             text-decoration: underline;
         }
-        main section {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.1);
-        }
-        main section h2 {
-            margin-bottom: 15px;
-            color: #003d80;
-        }
-        main ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        main ul li {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-        main ul li h3 {
-            margin-bottom: 5px;
-            color: #004080;
-        }
-        main ul li p {
-            margin: 2px 0;
-        }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="Index.html" style="display: block; padding: 10px; font-weight: bold;">← Back to Home</a>
+    </nav>
     <header>
-        <h1>HP Laptops</h1>
-        <nav>
-            <a href="Index.html">← Back to Home</a>
-        </nav>
+        <h1 style="text-align: center; margin-top: 10px;">Laptop HP</h1>
     </header>
+    <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-laptop"></i>Laptop<i class="fa-solid fa-arrow-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="dell.html">Dell</a></li>
+                                <li><a href="msi.html">MSI</a></li> 
+                                <li><a href="hp.html">HP</a></li>
+                                <li><a href="lenovo.html">Lenovo</a></li>                                     
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href=""><i class="fa-solid fa-camera"></i>Camera<i class="fa-solid fa-arrow-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="fujifilm.html">Fujifilm</a></li>
+                                <li><a href="canon.html">Canon</a></li>
+                                <li><a href="sony.html">Sony</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Phụ kiện<i class="fa-solid fa-arrow-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="card-do-hoa.html">Card đồ họa</a></li>
+                                <li><a href="cpu.html">CPU</a></li>
+                                <li><a href="the-nho.html">Thẻ nhớ</a></li>
+                                <li><a href="chan-may-anh.html">Chân máy ảnh</a></li>
+                                <li><a href="den-flash.html">Đèn flash</a></li>
+                                <li><a href="filter.html">Filter</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Máy cũ giá rẻ</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <main>
-        <section>
-            <h2>Featured HP Laptops</h2>
-            <ul>
-                <li>
-                    <h3>HP Spectre x360</h3>
-                    <p>Convertible laptop with Intel i7 and 16GB RAM.</p>
-                    <p>Price: $1,299</p>
-                </li>
-                <li>
-                    <h3>HP Envy 13</h3>
-                    <p>Sleek ultrabook with Intel i5 and long battery life.</p>
-                    <p>Price: $999</p>
-                </li>
-                <li>
-                    <h3>HP Pavilion 15</h3>
-                    <p>Affordable laptop with AMD Ryzen 5 and 8GB RAM.</p>
-                    <p>Price: $649</p>
-                </li>
-            </ul>
-        </section>
+        <div class="container">
+            <section class="product-grid">
+                <article class="product-card">
+                    <img src="/Header/Laptop/HP/HP 15-FC0086AU A6VV9PA.jpg" alt="HP 15-FC0086AU A6VV9PA" class="product-image" />
+                    <div class="product-info">
+                        <h3 class="product-name">HP 15-FC0086AU A6VV9PA</h3>
+                        <p class="product-description">Affordable laptop with AMD Ryzen 3, 8GB RAM, and 256GB SSD.</p>
+                        <p class="product-price">12,000,000 ₫</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="/Header/Laptop/HP/HP OMEN MAX 16 16-ah0212TX.jpg" alt="HP OMEN MAX 16 16-ah0212TX" class="product-image" />
+                    <div class="product-info">
+                        <h3 class="product-name">HP OMEN MAX 16 16-ah0212TX</h3>
+                        <p class="product-description">Gaming laptop with Intel Core i7, NVIDIA RTX 3060, 16GB RAM, and 512GB SSD.</p>
+                        <p class="product-price">30,000,000 ₫</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="/Header/Laptop/HP/Laptop HP Spectre x360.jpg" alt="Laptop HP Spectre x360" class="product-image" />
+                    <div class="product-info">
+                        <h3 class="product-name">HP Spectre x360</h3>
+                        <p class="product-description">Convertible laptop with Intel Core i7, 16GB RAM, and 1TB SSD.</p>
+                        <p class="product-price">28,000,000 ₫</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </article>
+            </section>
+        </div>
     </main>
 </body>
 </html>
