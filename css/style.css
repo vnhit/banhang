@@ -32,7 +32,7 @@ nav ul{
     align-items: center;
 }
 nav ul li, a{
-    color: white;
+    color: rgb(241, 63, 63);
     font-size: 15px;
 }
 nav ul li:nth-child(2) a {
@@ -83,12 +83,15 @@ nav ul li:nth-child(5):hover a {
 nav ul li:nth-child(6) a {
     color: rgb(54, 54, 54);
 }
+nav ul li:nth-child(9) a {
+    color: rgb(54, 54, 54);
+}
 .btn-content {
     position: relative;
     width: 6px;
     height: 6px;
     border-radius: 100%;
-    background-color: rgb(85, 79, 79);
+    background-color: rgb(228, 13, 13);
     display: block;
     float: left;
     margin: 6px;
@@ -100,7 +103,7 @@ nav ul li:nth-child(6) a {
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    background-color: rgb(90, 75, 75);
+    background-color: rgb(233, 13, 13);
     display: block;
     pointer-events: none;
     animation: btnmh 1s linear infinite;
@@ -121,7 +124,7 @@ nav ul li:nth-child(7) a, nav ul li:nth-child(8) a {
 /*------------menu-bar-------------*/
 .menu-bar {
     background-color: rgb(147, 153, 151);
-    
+    z-index: 100;
 }
 .menu-bar ul {
     display: flex;
@@ -165,8 +168,8 @@ nav ul li:nth-child(7) a, nav ul li:nth-child(8) a {
 /*-------------adress-form-------------*/
 .adress-form {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgb(0, 0, 0, 0.5);
     top: 0;
     right: 0;
@@ -178,11 +181,14 @@ nav ul li:nth-child(7) a, nav ul li:nth-child(8) a {
     display: none;
     z-index: 999;
 }
+
 .adress-form-content {
     width: 450px;
     height: 450px;
     background-color: #fff;
     border-radius: 5px;
+    background: white;
+    position: relative;
 }
 .adress-form-content form {
     padding: 12px 40px;
@@ -190,7 +196,7 @@ nav ul li:nth-child(7) a, nav ul li:nth-child(8) a {
 .adress-form-content h2 {
     font-size: 15px;
     padding: 12px 0;
-    border-bottom: 1px solid #696767;
+    border-bottom: 1px solid #fff;
     position: relative;
 }
 .adress-form-content h2 span {
@@ -199,7 +205,7 @@ nav ul li:nth-child(7) a, nav ul li:nth-child(8) a {
     height: 30px;
     padding: 30px;
     padding: 0 6px;
-    border: 1px solid #6d6b6b;
+    border: 1px solid #fff;
     right: 12px;
     cursor: pointer;
     top: 50%;
@@ -217,7 +223,7 @@ nav ul li:nth-child(7) a, nav ul li:nth-child(8) a {
     width: 100%;
     margin-top: 20px;
     border-radius: 5px;
-    border: 1px solid #6d6b6b;
+    border: 1px solid #fff;
 }
 .adress-form-content form button {
     margin-top: 30px;
@@ -231,25 +237,45 @@ nav ul li:nth-child(7) a, nav ul li:nth-child(8) a {
 }
 
 /*----------------submenu-------------------*/
-.menu-bar-content ul li {
+.menu-bar-content > ul > li {
     position: relative;
+}
+.menu-bar-content > ul > li:hover {
+    z-index: 1001;
 }
 .submenu {
     position: absolute;
-    background-color: #ddd;
+    background-color: #fff;
     width: 300px;
     height: auto;
     left: 0;
     top: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    z-index: 100;
     padding: 12px;
     display: none;
 }
 .submenu ul {
     display: flex;
     flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .submenu ul li {
     padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+.submenu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+.submenu a:hover {
+    background-color: #f5f5f5;
 }
 .submenu ul li:hover a {
     color: rgb(201, 168, 115);
@@ -261,79 +287,85 @@ nav ul li:nth-child(7) a, nav ul li:nth-child(8) a {
     display: block;
 }
 
-/* Phần Menu */
+/* ------------------product cards-------------------- */
+.brand-section {
+    display: none;
+    padding: 20px;
+    display: none;
+}
+.brand-section.active {
+    display: block;
+}
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
-    padding: 20px 0;
+    padding: 20px;
 }
-
 .product-card {
-    background: white;
+    background-color: white;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: box-shadow 0.3s ease;
-    height: 380px; /* fixed height for uniform cards */
+    transition: transform 0.3s ease;
 }
-
 .product-card:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
 }
-
 .product-image {
     width: 100%;
-    height: 160px;
-    object-fit: contain;
-    background-color: #f9f9f9;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
-
 .product-info {
-    padding: 12px 16px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 200px; /* chiều cao cố định cho vùng văn bản nhất quán */
+    padding: 15px;
 }
-
 .product-name {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
     color: #333;
-    margin-bottom: 8px;
-    min-height: 48px;
 }
-
+.product-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
 .product-price {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #e91e63;
-    margin-bottom: 12px;
+    font-size: 16px;
+    color: #e53935;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
-
 .add-to-cart-btn {
-    background-color: #ff5722;
+    padding: 10px 15px;
+    background-color: #e53935;
     color: white;
     border: none;
     border-radius: 4px;
-    padding: 8px 0;
-    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 .add-to-cart-btn:hover {
-    background-color: #e64a19;
+    background-color: #c62828;
+}
+.dropdown-parent {
+    position: relative;
+}
+.dropdown-parent:hover .submenu {
+    display: block;
+}
+.brand-link.active {
+    color: #007bff;
+    font-weight: bold;
+}
+#adress-close {
+    float: right;
+    cursor: pointer;
+    color: #999;
+    padding: 5px;
 }
 
-.product-description {
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* giới hạn 3 dòng */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+#adress-close:hover {
+    color: #333;
 }
