@@ -1,0 +1,36 @@
+body{
+    background-image: url("/Header/intro/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    alt: "background";
+}
+.intro-content {
+    position: relative;
+}
+.intro-image{
+    width: 650px;
+    height: 650px;
+    float:right;
+    margin-right: 100px; 
+    position: relative;
+}
+.headline{
+    font-family: Arial;
+    font-size: 60px;
+    font-weight: 550; 
+    margin-left: 300px; 
+    margin-top: 150px; 
+    position: absolute;
+}
+.subheadline{
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: 400; 
+    margin-left: 320px; 
+    margin-top: 330px; 
+    position: absolute;
+}
+

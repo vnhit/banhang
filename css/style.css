@@ -289,9 +289,7 @@ nav ul li:nth-child(7) a, nav ul li:nth-child(8) a {
 
 /* ------------------product cards-------------------- */
 .brand-section {
-    display: none;
     padding: 20px;
-    display: none;
 }
 .brand-section.active {
     display: block;

@@ -1,0 +1,115 @@
+.contact{
+    background-color: #a0a0a0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+}
+.product_list{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 10px;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 10px;
+}
+.product_container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 40%;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    height: 250px;
+    width: 180px;
+}
+.product_container a:hover{
+    box-shadow: 2px 2px black;
+}
+.product_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.product_name{
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+.des_list{
+    display: flex;
+    justify-content: left;
+    margin-left: 5px;
+    gap: 10px;
+}
+.des_container{
+    background-color: #bdbdbd;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    padding: 3px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+.price{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+.star{
+    width: 20px;
+    height: 20px;
+}
+.star_num{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    padding: 5px;
+    padding-left: 2px;
+    margin-right: 20px;
+}
+.container{
+    display: auto;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+}
+.filter{
+    background-color: white;
+    color: rgb(0, 205, 205);
+    border-color: rgb(0, 205, 205);
+    border: 2px solid;
+    border-radius: 8px;
+    margin: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+.logo_list{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    margin: 10px;
+    margin-bottom: 40px;
+    justify-content: left;
+    gap: 10px;
+}
+.logo_container{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    height: 40px;
+    width: 120px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+}

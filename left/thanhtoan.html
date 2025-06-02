@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to TGTB</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e4e4e4;
+            font-family: Arial, sans-serif;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+        .container {
+            margin-top: 30px;
+            justify-self: center;
+            width: 40%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .input1, button {
+            padding: 8px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #58e3f0;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .radio-group, .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .radio-group label, .button-group button {
+            flex: 1;
+            text-align: left;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <form class="container" th:action="@{/thanhtoan}" th:object="${user}" method="post">
+        <h2>Thông tin giao hàng</h2>
+        <p style=" padding: 10px; border-bottom: 1px solid black;font-weight: bold; font-size: 20px;">Thông tin người đặt</p>
+        <p class="input1" style="width: 100%; margin-top:20px ;" th:text="*{Name}">Name</p>
+        <p class="input1" style="width: 100%; margin-top:20px ;" th:text="*{PhoneNumber}"></p>
+        <p class="input1" style="width: 100%; margin-top:20px ;" th:text="*{Email}"></p>
+        <input class="input1" name="address" style="width: 100%; margin-top:20px ;" type="text" placeholder="Địa chỉ cụ thể">
+        <button style="width: 100%; margin-top:20px ;" type="submit">Đặt hàng</button>
+        <button type="button" style="width: 100%; margin-top:20px; background-color: #ccc;" onclick="window.location.href='/cart'">Quay lại</button>
+    </form>
+</body>
+</html>

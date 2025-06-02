@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../css/menu-style.css">
+    <link rel="stylesheet" href="../css/contact-style.css">
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #e4e4e4;
+    }
+    .searchbar{
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        height: 30px;
+        margin-top: 10px;
+        padding-left: 20px;
+        display: flex;
+        font-size: 16px;
+        float: left;
+        width: 500px;
+    }
+    .name{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        padding-left: 50px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        overflow: hidden;
+    }
+    .container{
+        justify-self: center;
+        background-color: white;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 70% 30%;
+        row-gap: 20px;
+        column-gap: 30px;
+        width: 80%;
+        border-radius: 10px;
+        margin: 30px;
+    }
+    .product{
+        border-bottom: 1px solid black;
+        display: grid;
+        grid-template-columns: 20% auto auto;
+        width: 100%;
+        height: fit-content;
+        gap: 10px;
+        padding: 20px;
+    }
+    .product-text{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    .price{
+        color: red;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: 600;
+        margin: 0;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        float: right;
+    }
+    .container1{
+        background-color: white;
+        justify-self: center;
+        border-radius: 10px;
+        width: 80%;
+        border-radius: 10px;
+        margin: 30px;
+        height: 250px;
+        width: 80%;
+        padding-top: 30px;
+        padding-left: 50px;
+    }
+    .add_cart{
+        background-color: rgb(143, 245, 245);
+        border-radius: 10px;
+        font-family: sans-serif;
+        font-size: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        font-weight: 500;
+        border: none;
+        margin-top: 20px;
+        justify-self: center;
+        width: 40%;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .button-con{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-self: center;
+    }
+    button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        size: 100%;
+        margin: 10px;
+    }    
+    .button-con button {
+        width: auto;
+    }
+</style>        
+</head>
+<body>
+    <ul>
+        <li class="logo">LAPSHOP</li>
+        <li style="float: left;"><a href="/Home">Trang chủ</a></li>
+        <li><a href="/logout">Đăng xuất</a></li>
+        <!-- <li style="float: left;"><input class="searchbar" type="text" placeholder="Tìm kiếm"></li> -->
+        <li><a href="/account">Tài khoản</a></li>
+        <li><a href="/cart">Giỏ hàng</a></li>
+        <li><a href="/order">Đơn hàng</a></li>
+    </ul>
+    <h1 style="padding: 50px; border-top: 2px solid black; text-align: center;">Đơn hàng</h1>
+    <div class="container">
+        <div class="product" th:each="order: ${orders}" th:attr="data-id=${order.Id}">
+            <p th:text="'Mã đơn hàng: ' + ${order.Id}"></p>
+            <p th:text="'Mã khách hàng: '+${order.CustomerUserId}"></p>
+            <p th:text="'Ngày đặt hàng: '+${order.BuyDate}"></p>
+            <p th:text="'Địa chỉ: '+${order.Address}"></p>
+            <p th:text="'Trạng thái: '+${order.Status}"></p>
+        </div>
+    </div>
+    <div class="button-con" style="text-align: center; margin-top: 20px;">
+        <button th:if="${currentPage > 1}"
+                th:onclick="'window.location.href=\'/order?page=' + (${currentPage} - 1) + '\''">
+            &laquo; Trang trước
+        </button>
+
+        <span>Trang <span th:text="${currentPage}"></span> / <span th:text="${totalPages}"></span></span>
+
+        <button th:if="${currentPage < totalPages}"
+                th:onclick="'window.location.href=\'/order?page=' + (${currentPage} + 1) + '\''">
+            Trang sau &raquo;
+        </button>
+    </div>
+
+    <div class="contact">
+        <div>
+            <h1>Contact us:</h1>
+            <p>Phone: 0123456789</p>
+            <p>Email: abc@lapshop.vn</p>
+        </div>
+        <div>
+            <h1>Need support?</h1>
+        </div>
+    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const items = document.querySelectorAll(".product");
+        items.forEach(function(item) {
+            item.addEventListener("click", function() {
+                const order_id = item.getAttribute("data-id");
+                window.location.href = "/OrderDetail?order_id=" + order_id;
+            });
+        });
+    });
+</script>
+</body>
+</html>
